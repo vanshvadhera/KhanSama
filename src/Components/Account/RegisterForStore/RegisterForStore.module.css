@@ -1,0 +1,17 @@
+.ReistrationForm h3{
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: #333;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.ReistrationForm Label{
+    display: flex;
+    font-weight: bold;
+    justify-content: center;
+}
+.submitButton{
+    display: flex;
+    justify-content: center;
+}

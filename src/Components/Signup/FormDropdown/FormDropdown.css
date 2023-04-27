@@ -1,0 +1,41 @@
+.signup-form-label{
+    font-size: 1.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 0.5rem;
+}
+.signup-form-text{
+    font-size: 0.8rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+    color: #000;
+    margin-bottom: 0.5rem;
+}
+.signup-form-check-input{
+    margin-right: 0.5rem;
+}
+.signup-form-check-label{
+    font-size: 1rem;
+    font-weight: 400;
+    color: #000;
+    margin-bottom: 0.5rem;
+    margin-left: 0.5rem;
+}
+.form-control{
+    font-size: 1rem;
+    font-weight: 400;
+    color: #000;
+    margin-bottom: 0.5rem;
+}
+.form-control:focus{
+    box-shadow: 0 0 0 0.1rem rgb(0, 0, 0);
+    border-color: rgb(0, 245, 16);
+}
+.form-control::placeholder{
+    color: #000;
+}
+.form-control:disabled{
+    background-color: #fff;
+}
