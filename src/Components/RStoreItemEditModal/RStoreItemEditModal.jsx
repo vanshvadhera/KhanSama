@@ -3,17 +3,29 @@ import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useRef } from 'react';
+import { useContext } from 'react';
+import MainContext from '../Store/MainContext';
+import { doc, setDoc } from 'firebase/firestore';
+import { db } from '../../FireBase';
 
 const RStoreItemEditModal = (props) => {
+    const MainCtx = useContext(MainContext)
     const itemNameref = useRef()
-    const editItem = (data) => {
+    const editItem = async(data) => {
         data.preventDefault()
-        const itemName = itemNameref.current.itemName.value
+        const itemName = props.itemname
         const itemSubHeading = itemNameref.current.itemSubHeading.value
         const cost = itemNameref.current.cost.value
         const type = itemNameref.current.type.value
+        const quantity = itemNameref.current.quantity.value
         console.log(itemName, itemSubHeading, cost, type)
+        const docref = doc(db, `Providor/${MainCtx.UserStore.username}/menu`, itemName)
+        await setDoc(docref, { Name: itemName, Price: cost, Size: quantity, Type: type, disc: itemSubHeading })
         props.handleClose()
+        MainCtx.SetAlert({ msg: "Item Edited Successfully", type: "success" })
+        setTimeout(() => {
+            MainCtx.SetAlert({ msg: '', type: '' })
+          }, 1000);
     }
     return (
         <div>
@@ -23,10 +35,6 @@ const RStoreItemEditModal = (props) => {
                 </Modal.Header>
                 <Modal.Body>
                     <Form ref={itemNameref} onSubmit={editItem}>
-                        <Form.Group className="mb-3" controlId="ItemName">
-                            <Form.Label>Item Name</Form.Label>
-                            <Form.Control required type="text" name='itemName' placeholder="Enter Item Name" />
-                        </Form.Group>
                         <Form.Group className="mb-3" controlId="itemsubHeading">
                             <Form.Label>Item Sub Heding</Form.Label>
                             <Form.Control required type="text" name='itemSubHeading' placeholder="Enter Item Sub Heading" />
@@ -35,11 +43,18 @@ const RStoreItemEditModal = (props) => {
                             <Form.Label>Cost</Form.Label>
                             <Form.Control required type="number" name='Cost' placeholder="Enter Cost" />
                         </Form.Group>
-                        <Form.Group className="mb-3" controlId="type">
-                            <Form.Label>Item Type</Form.Label>
-                            <Form.Check type='radio' id='Veg' label="Veg" value="Veg" name="type"/>
-                            <Form.Check type='radio' id='Non-Veg' label="Non-Veg" value="Non-veg" name="type" />
-                        </Form.Group>
+                        <div className='d-flex flex-row justify-content-around' >
+                            <Form.Group className="mb-3" controlId="type">
+                                <Form.Label>Item Type</Form.Label>
+                                <Form.Check type='radio' id='Veg' label="Veg" value="veg" name="type" />
+                                <Form.Check type='radio' id='Non-Veg' label="Non-Veg" value="Non-veg" name="type" />
+                            </Form.Group>
+                            <Form.Group className="mb-3" controlId="quantity">
+                                <Form.Label>Quantity</Form.Label>
+                                <Form.Check type='radio' id='Full' label="Full" value="Full" name="quantity" />
+                                <Form.Check type='radio' id='Half' label="Half" value="Half" name="quantity" />
+                            </Form.Group>
+                        </div>
                     </Form>
                 </Modal.Body>
                 <Modal.Footer>

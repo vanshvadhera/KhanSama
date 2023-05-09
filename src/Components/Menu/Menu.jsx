@@ -53,7 +53,7 @@ const Menu = () => {
                         </div>
                         <hr />
                         {docs?.map((data) => {
-                            return <MenuItem key={data.Name} name={data.Name} qut={data.Size} type={data.Type} price={data.Price} ides={data.desc} />
+                            return <MenuItem key={data.Name} name={data.Name} qut={data.Size} type={data.Type} price={data.Price} ides={data.disc} />
                         })}
                     </div>
                 </Modal.Body>

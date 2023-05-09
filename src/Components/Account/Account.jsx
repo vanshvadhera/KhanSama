@@ -42,7 +42,6 @@ const Account = () => {
               <p style={{ color: "white" }} >{user === null ? "": "Gold Member"}</p>
             </div>
           </div>
-
           <div className='d-flex flex-column justify-content-between'>
             <div>
               <Button onClick={handleLogout} ><i className="fa-solid fa-right-from-bracket"> Log Out</i></Button>

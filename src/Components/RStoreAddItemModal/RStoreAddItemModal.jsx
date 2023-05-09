@@ -2,23 +2,35 @@ import React, { useRef } from 'react'
 import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
+import { doc, setDoc } from 'firebase/firestore'
+import { db } from '../../FireBase'
+import { useContext } from 'react'
+import MainContext from '../Store/MainContext'
 
 const RStoreAddItemModal = (props) => {
     const addItemRef = useRef()
-    const addItem = (data) => {
+    const MainCtx = useContext(MainContext)
+    const addItem = async (data) => {
         data.preventDefault()
         const ItemName = addItemRef.current.itemName.value
         const itemSubHeading = addItemRef.current.itemSubHeading.value
         const Cost = addItemRef.current.Cost.value
         const Type = addItemRef.current.type.value
         const quantity = addItemRef.current.quantity.value
-        console.log(ItemName, itemSubHeading, Cost , Type, quantity)
+        console.log(ItemName, itemSubHeading, Cost, Type, quantity)
+        console.log("MainCtx.UserStore",MainCtx.UserStore.username);
+        const docref = doc(db, `Providor/${MainCtx.UserStore.username}/menu`, ItemName)
+        await setDoc(docref, { Name: ItemName, Price: Cost, Size: quantity, Type: Type, disc: itemSubHeading })
+        MainCtx.SetAlert({ msg: "Item Added Successfully", type: "success" })
+        setTimeout(() => {
+            MainCtx.SetAlert({ msg: '', type: '' })
+          }, 1000);
     }
     return (
         <div>
             <Modal show={props.show} onHide={props.handleClose}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Edit Item Details</Modal.Title>
+                    <Modal.Title>Add Your Item Here</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <Form ref={addItemRef} onSubmit={addItem}>
@@ -37,7 +49,7 @@ const RStoreAddItemModal = (props) => {
                         <div className='d-flex flex-row justify-content-around' >
                             <Form.Group className="mb-3" controlId="type">
                                 <Form.Label>Item Type</Form.Label>
-                                <Form.Check type='radio' id='Veg' label="Veg" value="Veg" name="type" />
+                                <Form.Check type='radio' id='Veg' label="Veg" value="veg" name="type" />
                                 <Form.Check type='radio' id='Non-Veg' label="Non-Veg" value="Non-veg" name="type" />
                             </Form.Group>
                             <Form.Group className="mb-3" controlId="quantity">

@@ -30,7 +30,7 @@ const RegisterForStore = () => {
 
   const SignUpStore = async (data) => {
     const docref = doc(db, "Providor", LoginInfo.email)
-    await setDoc(docref, { email: data.StoreEmailId, storename: data.Name, storeadd: data.Address, storephone: data.PhoneNumber, store_time_f: data.StoreTimeFrom, store_time_t: data.StoreTimeTo, description: data.AboutStore, username: LoginInfo.email, subheading: data.AboutStoreFood }).then(() => {
+    await setDoc(docref, { email: data.StoreEmailId, storename: data.Name, storeadd: data.Address, storephone: data.PhoneNumber, store_time_f: data.StoreTimeFrom, store_time_t: data.StoreTimeTo, description: data.AboutStore, username: LoginInfo.email, subheading: data.AboutStoreFood, image:"https://firebasestorage.googleapis.com/v0/b/test-project-c9819.appspot.com/o/image%2Flogo.png?alt=media&token=24877197-b49d-4437-b79e-992337b27928" }).then(() => {
       MainCtx.SetAlert({ msg: "Stored Registerd Successfully", type: "success" })
       setTimeout(() => {
         MainCtx.SetAlert({ msg: '', type: '' })

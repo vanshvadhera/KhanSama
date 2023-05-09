@@ -101,7 +101,7 @@ const FormDropdown = () => {
                             <input type="password" name='password' className="form-control" id="loginexampleInputPassword1" />
                         </div>
                         <div className="mb-3 signup-form-check">
-                            <input type="checkbox" name='checkbox' className="form-check-input" id="loginexampleCheck1" />
+                            <input type="checkbox" required name='checkbox' className="form-check-input" id="loginexampleCheck1" />
                             <label className="signup-form-check-label" htmlFor="loginexampleCheck1">Check me out</label>
                         </div>
                         <button type="submit" className="btn btn-primary">Submit</button>
@@ -140,7 +140,7 @@ const FormDropdown = () => {
                             <input type="password" name='repassword' className="form-control" id="exampleInputRe-Password1" />
                         </div>
                         <div className="mb-3 signup-form-check">
-                            <input type="checkbox" name='checkbox' className="form-check-input" id="exampleCheck1" />
+                            <input type="checkbox" required name='checkbox' className="form-check-input" id="exampleCheck1" />
                             <label className="signup-form-check-label" htmlFor="exampleCheck1">Check me out</label>
                         </div>
                         <button type="submit" className="btn btn-primary">Submit</button>

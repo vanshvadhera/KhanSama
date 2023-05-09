@@ -30,7 +30,7 @@ const MainProvider = (props) => {
     const [CartShow, setCartShow] = React.useState(false);
     const [LoginData, setLoginData] = React.useState({});
     const [alert, setAlert] = React.useState({msg : "", type: ""})
-    const [, setSignupData] = React.useState({});
+    const [,setSignupData] = React.useState({});
     const changeShow = () => { setShow(!show) }
     const changeMenuShow = () => { setMenuShow(!Menushow) }
     const changeCartShow = () => { setCartShow(!CartShow) }
