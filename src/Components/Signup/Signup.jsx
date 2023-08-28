@@ -17,7 +17,7 @@ const Signup = () => {
                 <Offcanvas.Body>
                     <h3>New User ....? 🥺🥺</h3>
                     <p>No worries, Your are on Write Track 🤭  </p>
-                    <p>Signup to get access to all the features of KhanSama</p>
+                    <p>Signup to get access to all the features of YumYards</p>
                     <FormDropdown />
                 </Offcanvas.Body>
             </Offcanvas>

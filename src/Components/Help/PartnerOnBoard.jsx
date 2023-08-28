@@ -9,7 +9,7 @@ const PartnerOnBoard = () => {
                 <Accordion.Item eventKey="0">
                     <Accordion.Header>Term of Use</Accordion.Header>
                     <Accordion.Body>
-                        Welcome to KhanSama ("the Website"). By accessing and using the Website, you agree to be bound by the following terms and conditions ("Terms of Use"), which govern your use of the Website. If you do not agree to these Terms of Use, please do not use the Website.
+                        Welcome to YumYards ("the Website"). By accessing and using the Website, you agree to be bound by the following terms and conditions ("Terms of Use"), which govern your use of the Website. If you do not agree to these Terms of Use, please do not use the Website.
                         <br />
                         <br />
                         Use of the Website :
@@ -17,7 +17,7 @@ const PartnerOnBoard = () => {
                         <br />
                         <br />
                         Intellectual Property :
-                        All content on the Website, including but not limited to text, graphics, logos, images, audio clips, digital downloads, data compilations, and software, is the property of KhanSama or its content suppliers and is protected by international copyright laws. You may not modify, copy, reproduce, republish, upload, post, transmit or distribute any material on the Website without our prior written consent.
+                        All content on the Website, including but not limited to text, graphics, logos, images, audio clips, digital downloads, data compilations, and software, is the property of YumYards or its content suppliers and is protected by international copyright laws. You may not modify, copy, reproduce, republish, upload, post, transmit or distribute any material on the Website without our prior written consent.
                         <br />
                         <br />
                         Links to Third-Party Websites :
@@ -121,7 +121,7 @@ const PartnerOnBoard = () => {
                     <Accordion.Header>Cancellations and refunds</Accordion.Header>
                     <Accordion.Body>
                         At [Company Name], we want our customers to be completely satisfied with their food order. If for any reason you need to cancel an order or request a refund, please read the following information carefully.
-<br /><br />
+                        <br /><br />
                         Cancellation Policy:
                         <br /><br />
                         You can cancel your order anytime before the restaurant starts preparing your food. To cancel an order, please contact our customer support team by phone or email, and provide them with your order details. Once we receive your cancellation request, we will process it as soon as possible.
@@ -138,7 +138,7 @@ const PartnerOnBoard = () => {
                         <br /><br />
                         If you have any other questions or concerns about our cancellation and refund policy, please don't hesitate to contact our customer support team.
                         <br /><br />
-                        We hope you enjoy your food and have a great experience with KhanSama. Thank you for choosing us for your food order needs.
+                        We hope you enjoy your food and have a great experience with YumYards. Thank you for choosing us for your food order needs.
 
 
 

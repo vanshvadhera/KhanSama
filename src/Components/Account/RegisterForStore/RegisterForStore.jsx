@@ -42,7 +42,7 @@ const RegisterForStore = () => {
   return (
     <div className={classes.ReistrationForm}>
       <div className='d-flex justify-content-center'>
-        <h3>Register Your Store And Become a KhanSama Merchant</h3>
+        <h3>Register Your Store And Become a YumYards Merchant</h3>
       </div>
       <Container>
         <div className="ms-5 me-5">

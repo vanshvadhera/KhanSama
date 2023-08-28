@@ -21,14 +21,14 @@ const NavBar2 = () => {
                             height="35"
                             className="d-inline-block align-top me-3"
                         />
-                        KhanSama Merchant</Navbar.Brand>
+                        YumYards Merchant</Navbar.Brand>
                     <div style={{ display: "flex" }}>
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                         <Navbar.Collapse className='ps-5'>
                             <Nav >
                                 <Nav.Link as={Link} to="/ResturantPage" className={classes.link}>Home</Nav.Link>
                                 <Nav.Link as={Link} to="/RStoreOrder" className={classes.link}>Orders</Nav.Link>
-                                <Nav.Link as={Link} to="/" className={classes.link}>KhanSama</Nav.Link>
+                                <Nav.Link as={Link} to="/" className={classes.link}>YumYards</Nav.Link>
                             </Nav>
                         </Navbar.Collapse>
                     </div>

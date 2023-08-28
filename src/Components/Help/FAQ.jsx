@@ -6,11 +6,11 @@ const FAQ = () => {
   return (
     <Accordion>
       <Accordion.Item eventKey="0">
-        <Accordion.Header>How to contact KhanSama</Accordion.Header>
+        <Accordion.Header>How to contact YumYards</Accordion.Header>
         <Accordion.Body>
-          We value our customer’s time and hence moved away from a single customer care number to a comprehensive chat-based support system for quick and easy resolution. You no longer have to go through the maze of an IVRS call support. Just search for your issue in the help section on this page and initiate a chat with us. A customer care executive will be assigned to you shortly. You can also email us your issue on KhanSama@gmail.com 
+          We value our customer’s time and hence moved away from a single customer care number to a comprehensive chat-based support system for quick and easy resolution. You no longer have to go through the maze of an IVRS call support. Just search for your issue in the help section on this page and initiate a chat with us. A customer care executive will be assigned to you shortly. You can also email us your issue on YumYards@gmail.com
           <br /><br />
-          Note: We value your privacy and your information is safe with us. Please do not reveal any personal information, bank account number, OTP etc. to another person. A KhanSamarepresentative will never ask you for these details. Please do not reveal these details to fraudsters and imposters claiming to be calling on our behalf. Be vigilant and do not entertain phishing calls or emails.
+          Note: We value your privacy and your information is safe with us. Please do not reveal any personal information, bank account number, OTP etc. to another person. A YumYardsrepresentative will never ask you for these details. Please do not reveal these details to fraudsters and imposters claiming to be calling on our behalf. Be vigilant and do not entertain phishing calls or emails.
           <br /><br />
           Email us at : KhanSam@gmail.com
         </Accordion.Body>
@@ -104,19 +104,19 @@ const FAQ = () => {
       <Accordion.Item eventKey="9">
         <Accordion.Header>Deactivate my Account ?</Accordion.Header>
         <Accordion.Body>
-          Please write to us at khanSama@gmail.com in in the event that you want to deactivate your account.
+          Please write to us at YumYards@gmail.com in in the event that you want to deactivate your account.
         </Accordion.Body>
       </Accordion.Item>
       <Accordion.Item eventKey="10">
         <Accordion.Header>Unable to view deatils in my profile?</Accordion.Header>
         <Accordion.Body>
-      Please check your internet connection and try again. If the problem persists, please contact us at KhanSam@gmail.com
+          Please check your internet connection and try again. If the problem persists, please contact us at KhanSam@gmail.com
         </Accordion.Body>
       </Accordion.Item>
       <Accordion.Item eventKey="11">
         <Accordion.Header>I want an invoice for my oder</Accordion.Header>
         <Accordion.Body>
-          Please write to us at KhanSama@gmail.com
+          Please write to us at YumYards@gmail.com
         </Accordion.Body>
       </Accordion.Item>
     </Accordion>

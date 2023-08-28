@@ -13,7 +13,7 @@ const Resturants = () => {
     return (
         <div>
             <Container>
-                <SubNavbar />
+                {/* <SubNavbar /> */}
                 <hr style={{ marginTop: "-5px", }} />
                 <CardGrid />
                 {MainCtx.menuPath && <Menu />}

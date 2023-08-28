@@ -24,8 +24,8 @@ const FormDropdown = () => {
         const checkbox = loginform.current.checkbox.value;
         setLoginFromData({ email, password, checkbox })
         MainCtx.LoginData({ email, password, checkbox })
-        LoginFunctionCall({ email, password, checkbox})
-        
+        LoginFunctionCall({ email, password, checkbox })
+
     }
     //Function for login form data
     const LoginFunctionCall = async (data) => {
@@ -37,23 +37,23 @@ const FormDropdown = () => {
                 const { email } = data
                 localStorage.setItem("LoginData", JSON.stringify({ email }))
                 navigate('/Account', { replace: true });
-                MainCtx.SetAlert({msg: "Login Successfull", type:"success"})
+                MainCtx.SetAlert({ msg: "Login Successfull", type: "success" })
                 setTimeout(() => {
-                    MainCtx.SetAlert({msg: '', type: ''})
+                    MainCtx.SetAlert({ msg: '', type: '' })
                 }, 5000);
             }
             else {
-                MainCtx.SetAlert({msg: "Login Failed", type:"danger"})
+                MainCtx.SetAlert({ msg: "Login Failed", type: "danger" })
                 setTimeout(() => {
-                    MainCtx.SetAlert({msg: '', type: ''})
+                    MainCtx.SetAlert({ msg: '', type: '' })
                 }, 5000);
             }
             console.log("Document data:", docdata.data().password);
         }
         else {
-            MainCtx.SetAlert({msg: "User Not Registered", type:"danger"})
+            MainCtx.SetAlert({ msg: "User Not Registered", type: "danger" })
             setTimeout(() => {
-                MainCtx.SetAlert({msg: '', type: ''})
+                MainCtx.SetAlert({ msg: '', type: '' })
             }, 5000);
         }
     }
@@ -79,9 +79,9 @@ const FormDropdown = () => {
         const docref = doc(db, "User", data.username)
         await setDoc(docref, { username: data.username, name: data.name, password: data.password, email: data.email, phoneno: data.number })
         navigate('/Account', { replace: true });
-        MainCtx.SetAlert({msg: "User Register", type:"success"})
+        MainCtx.SetAlert({ msg: "User Register", type: "success" })
         setTimeout(() => {
-            MainCtx.SetAlert({msg: '', type: ''})
+            MainCtx.SetAlert({ msg: '', type: '' })
         }, 5000);
     }
     return (
@@ -111,7 +111,7 @@ const FormDropdown = () => {
             <Accordion.Item eventKey="1">
                 <Accordion.Header>New User ..? Lets create your account 🤓</Accordion.Header>
                 <Accordion.Body>
-                    <p style={{ textAlign: "center" }}>Welcome to KhanSama ... 🥳🥳</p>
+                    <p style={{ textAlign: "center" }}>Welcome to YumYards ... 🥳🥳</p>
                     <form action='' ref={signupform} onSubmit={signupData} >
                         <div className="mb-3">
                             <label htmlFor="exampleName" className="signup-form-label">Name</label>

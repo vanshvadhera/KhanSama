@@ -8,7 +8,7 @@ import MainContext from '../Store/MainContext';
 import { useContext } from 'react';
 import Button from 'react-bootstrap/Button';
 
-const NavBar = ({children}) => {
+const NavBar = ({ children }) => {
     const MainCtx = useContext(MainContext)
     return (
         <>
@@ -22,7 +22,7 @@ const NavBar = ({children}) => {
                             height="35"
                             className="d-inline-block align-top me-3"
                         />
-                        KhanSama</Navbar.Brand>
+                        YumYards</Navbar.Brand>
                     <div style={{ display: "flex" }}>
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                         <Navbar.Collapse className='ps-5'>

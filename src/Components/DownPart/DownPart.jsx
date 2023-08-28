@@ -32,8 +32,8 @@ const DownPart = () => {
             />
 
             <div className="d-md-flex justify-content-around pt-4 pb-5" >
-                <h1 className={modules.h1}>KhanSama</h1>
-                <p className={modules.p}>© 2023 KhanSama. All rights reserved.</p>
+                <h1 className={modules.h1}>YumYards</h1>
+                <p className={modules.p}>© 2023 YumYards. All rights reserved.</p>
                 <div>
                     <i className="fa-brands fa-instagram fa-2xl" style={{ color: "#ffffff", margin: "10px" }} />
                     <i className="fa-brands fa-snapchat fa-2xl" style={{ color: "#ffffff" }} />
